@@ -2,6 +2,17 @@ Nova
 ## user data
 
 
+```sh
+nova boot \
+  --image trusty-server-cloudimg-amd64 \
+  --key_name mykey \
+  --flavor m1.small \
+  --user-data userdata.txt \
+  --nic net-id=4f0dcc21-4b6c-47db-b283-591fdb9aa5a7 \
+  test0
+```
+
+
 # This
 is what user-data
 ## typically
@@ -62,6 +73,8 @@ Update system on first boot
 
 
 ```yaml
+#cloud-config
+
 package_update: true
 package_upgrade: true
 ```
@@ -81,6 +94,15 @@ users:
   passwd: $6$rounds=4096$J86aZz0Q$To16RGzWJku0
   shell: /bin/bash
   sudo: "ALL=(ALL) NOPASSWD:ALL"
+```
+
+
+## `ssh_pwauth`
+Enable/disable SSH password authentication
+
+
+```
+ssh_pwauth: true
 ```
 
 
