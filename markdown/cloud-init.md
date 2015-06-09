@@ -56,6 +56,17 @@ What can we
 with `cloud-config`?
 
 
+### `package_update`
+### `package_upgrade`
+Update system on first boot
+
+
+```yaml
+package_update: true
+package_upgrade: true
+```
+
+
 # `users`
 Configures users and groups
 
@@ -70,16 +81,6 @@ users:
   passwd: $6$rounds=4096$J86aZz0Q$To16RGzWJku0
   shell: /bin/bash
   sudo: "ALL=(ALL) NOPASSWD:ALL"
-```
-
-
-# `bootcmd`
-Runs arbitrary commands early in the boot sequence
-
-
-```yaml
-bootcmd:
-- ntpdate pool.ntp.org
 ```
 
 
@@ -103,17 +104,6 @@ write_files:
     192.168.122.111 alice.example.com alice
     192.168.122.112 bob.example.com bob
     192.168.122.113 charlie.example.com charlie
-```
-
-
-### `package_update`
-### `package_upgrade`
-Update system on first boot
-
-
-```yaml
-package_update: true
-package_upgrade: true
 ```
 
 
@@ -168,7 +158,7 @@ chef:
 
 
 # `packages`
-Installs packages
+Install packages
 
 
 ```yaml
@@ -178,8 +168,22 @@ packages:
 ```
 
 
+Running
+## arbitrary commands
+
+
+# `bootcmd`
+Runs commands early in the boot sequence
+
+
+```yaml
+bootcmd:
+- ntpdate pool.ntp.org
+```
+
+
 # `runcmd`
-Runs arbitrary commands late in the boot sequence
+Runs commands late in the boot sequence
 
 
 ```yaml
