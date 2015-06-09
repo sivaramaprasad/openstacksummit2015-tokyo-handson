@@ -1,6 +1,7 @@
 @import url(//fonts.googleapis.com/css?family=Cabin:400,700);
 @import url(//fonts.googleapis.com/css?family=Special+Elite:400,700);
 @import url(//fonts.googleapis.com/css?family=Shadows+Into+Light:400,700);
+@import url(//fonts.googleapis.com/css?family=Source+Code+Pro);
 
 /* Disable background 4px border around images */
 .reveal section img {
@@ -109,8 +110,8 @@ body,
 }
 
 .reveal pre code {
-    font-family: "Courier New", monospace !important;
-    color: #DCDCDC !important;
+    font-family: "Source Code Pro", monospace !important;
+    background: inherit !important;
     text-shadow: none;
     text-transform: none;
 }
