@@ -197,6 +197,36 @@ Configures Neutron ports
 ```
 
 
+### `OS::Neutron::SecurityGroup`
+Configures Neutron security groups
+
+
+```
+  mysecurity_group:
+    type: OS::Neutron::SecurityGroup
+    properties:
+      description: Neutron security group rules
+      name: mysecurity_group
+      rules:
+      - remote_ip_prefix: 0.0.0.0/0
+        protocol: tcp
+        port_range_min: 22
+        port_range_max: 22
+      - remote_ip_prefix: 0.0.0.0/0
+        protocol: icmp
+        direction: ingress
+```
+
+```
+  mybox_management_port:
+    type: "OS::Neutron::Port"
+    properties:
+      network: { get_resource: mynet }
+      security_groups:
+        - { get_resource: mysecurity_group }
+```
+
+
 ### `OS::Neutron::FloatingIP`
 Allocates floating IP addresses
 
@@ -276,4 +306,3 @@ resources:
       user_data: { get_resource: myconfig }
       user_data_format: RAW
 ```
-
