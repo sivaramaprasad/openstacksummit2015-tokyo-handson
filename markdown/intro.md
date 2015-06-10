@@ -1,4 +1,5 @@
-http://hastexo.github.io/openstack-dach-2015-orchestration
+<div class="qrcode" id="qrcode-talk"/>
+[http://hastexo.github.io/openstack-dach-2015-orchestration](http://goo.gl/W1Lnrp) <!-- .element id="talk" -->
 
 
 OpenStack
