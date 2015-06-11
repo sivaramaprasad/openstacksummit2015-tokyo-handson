@@ -16,9 +16,9 @@ http://docs.openstack.org/hot-reference/
 
 
 <!-- .slide: data-background-image="images/by-sa.svg" data-background-size="contain" -->
-http://hastexo.github.io/openstack-dach-2015-orchestration
+http://hastexo.github.io/osil2015-orchestration
 
-http://hastexo.github.io/openstack-dach-2015-orchestration
+https://github.com/hastexo/osil2015-orchestration
 
 
 <!-- .slide: data-background-image="images/hastexo-logo.svg" data-background-size="contain" -->
