@@ -23,7 +23,7 @@ Note:
 You're welcome to
 ## follow along
 
-https://github.com/fghaas/openstack-dach-2015-orchestration
+https://github.com/fghaas/susecon2015
 Note:
 - All examples given in this talk are available from GitHub so you can
   follow along.
