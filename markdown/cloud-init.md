@@ -57,11 +57,6 @@ a newly booted VM
 feature
 
 
-`cloud-config` is Ubuntu's most
-## underrated
-feature
-
-
 What can we
 # do
 with `cloud-config`?
