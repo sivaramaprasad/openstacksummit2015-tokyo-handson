@@ -4,7 +4,9 @@ and
 ## Automation
 Inside and Out
 
-Florian Haas, [`florian@hastexo.com`](mailto:florian@hastexo.com)
+[Florian Haas](mailto:florian@hastexo.com) & [Syed Armani](mailto:syed@hastexo.com)
+
+[`@xahteiwi`](https://twitter.com/xahteiwi) | [`@syedarmani`](https://twitter.com/syedarmani) | [`@hastexo`](https://twitter.com/hastexo)
 
 
 A few
@@ -23,7 +25,7 @@ Note:
 You're welcome to
 ## follow along
 
-https://github.com/fghaas/susecon2015
+https://github.com/hastexo/openstacksummit2015-tokyo-handson
 Note:
 - All examples given in this talk are available from GitHub so you can
   follow along.
