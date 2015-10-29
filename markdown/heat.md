@@ -103,7 +103,7 @@ these parameters
 
 ```sh
 heat stack-create -f stack.yml \
-  -P key_name=mykey
+  -P key_name=mykey \
   -P image=cirros-0.3.3-x86_64 \
   mystack
 ```
