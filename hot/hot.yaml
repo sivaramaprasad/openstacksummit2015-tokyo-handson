@@ -8,13 +8,15 @@ parameters:
   image:
     type: string
     description: Image name or ID
-    default: trusty-server-cloudimg-amd64
+    default: cirros-0.3.4-x86_64-uec
   key_name:
     type: string
     description: Keypair to inject into newly created servers
+    default: heat_key
   public_net_id:
     type: string
     description: Public network ID
+    default: public
   username:
     type: string
     description: Additional login username
