@@ -1,0 +1,47 @@
+$ sudo apt-get install git -y
+$ sudo git clone https://github.com/openstack-dev/devstack.git -b stable/liberty
+
+$ cd devstack
+
+$ git branch 
+
+the output will be as 
+
+*  stable/liberty
+
+$sudo  cp /home/ubuntu/devstack/samples/local.conf  /home/ubuntu/devstack
+$sudo chown -R ubuntu:ubuntu /home/ceph/devstack
+
+$vi local.conf
+
+[[local|localrc]]
+HOST_IP=192.168.2.105  #replace wit your host_ip
+
+default_password=vedams123  #replace with your password
+# Passwords and token
+ADMIN_PASSWORD=$default_password
+MYSQL_PASSWORD=$default_password
+RABBIT_PASSWORD=$default_password
+SERVICE_PASSWORD=$default_password
+SERVICE_TOKEN=token
+disable_service n-net
+enable_service q-svc
+enable_service q-agt
+enable_service q-dhcp
+enable_service q-l3
+enable_service q-meta
+# Optional, to enable tempest configuration as part of devstack
+enable_service tempest
+enable_service heat h-api h-api-cfn h-api-cw h-eng
+EXTRA_OPTS=(notification_driver=nova.openstack.common.notifier.rabbit_notifier,ceilometer.compute.nova_notifier)
+#enable_service ceilometer-acompute,ceilometer-acentral,ceilometer-collector,ceilometer-api
+enable_service n-novnc
+enable_service n-cauth
+
+#Log Output
+LOGFILE=/opt/stack/logs/stack.sh.log
+VERBOSE=True
+LOG_COLOR=False
+SCREEN_LOGDIR=/opt/stack/logs
+RECLONE=True
+
